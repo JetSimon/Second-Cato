@@ -22,7 +22,6 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    print(message.author)
     if str(message.author) == "Cato#1946" or message.author.id == 191683697953472512:
         await message.channel.send(message.content)
 
