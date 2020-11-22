@@ -22,7 +22,8 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author == "Cato#1946":
+    print(message.author)
+    if str(message.author) == "Cato#1946":
         await message.channel.send(message.content)
 
 client.run(TOKEN)
