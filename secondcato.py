@@ -23,13 +23,13 @@ async def on_ready():
 @client.event
 async def on_message(message):
     print(message.author)
-    if str(message.author) == "Cato#1946":
+    if str(message.author) == "Cato#1946" or message.author.id == 191683697953472512:
         await message.channel.send(message.content)
 
 @client.event
 async def on_message_edit(before, after):
-    if str(after.author) == "Cato#1946":
-        await message.channel.send("Cato Edited: " + before.content+ "\n\nNow Says: " + after.content)
+    if str(after.author) == "Cato#1946" or after.author.id == 191683697953472512:
+        await before.channel.send("Cato Edited: " + before.content+ "\n\nNow Says: " + after.content)
 
 client.run(TOKEN)
 
