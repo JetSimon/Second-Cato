@@ -26,5 +26,10 @@ async def on_message(message):
     if str(message.author) == "Cato#1946":
         await message.channel.send(message.content)
 
+@client.event
+async def on_message_edit(before, after):
+    if str(after.author) == "Cato#1946":
+        await message.channel.send("Cato Edited: " + before.content+ "\n\nNow Says: " + after.content)
+
 client.run(TOKEN)
 
